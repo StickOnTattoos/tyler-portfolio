@@ -1,0 +1,325 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: white;
+    font-size: 62.5%;
+  }
+  
+  .section-header {
+    font-size: 2.75rem;
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  
+  /* Navbar and Hamburger styling ===================================================== */
+  
+  .nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    z-index: 100;
+  }
+  
+  .hamburger {
+    cursor: pointer;
+    position: fixed;
+    left: 30px;
+    font-size: 1.5rem;
+  }
+  
+  .fa-bars {
+    color: white;
+  }
+  
+  .hamburger i:hover {
+    transition: 0.3s ease;
+    transform: scale(1.25);
+  }
+  
+  #header-link {
+    font-size: 3.5rem;
+    color: white;
+  }
+  
+  #header-link:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .link-item {
+    font-size: 2.75rem;
+  }
+  
+  /* Side nav styling ===================================================== */
+  
+  .nav-offcanvas {
+    width: 300px;
+    background: black;
+    height: 100vh;
+    position: fixed;
+    overflow-x: auto;
+    z-index: 2000;
+    padding: 50px 0;
+    top: 0;
+    left: -300px;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .nav-offcanvas .close {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    outline: 0;
+    opacity: 1;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  .nav-offcanvas .close i {
+    font-size: 1.3rem;
+    color: lightgrey;
+    text-shadow: none;
+  }
+  .nav-offcanvas .close:hover {
+    transform: scale(1.2);
+  }
+  .nav-offcanvas-menu ul {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+  .nav-offcanvas-menu ul li a {
+    color: lightgrey;
+    font-size: 3.2rem;
+    font-weight: 300;
+    padding: 10px 40px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
+  }
+  .nav-offcanvas-menu ul li a:hover {
+    text-decoration: underline;
+    transition: 0.3s ease;
+    transform: scale(1.1);
+  }
+  
+  .nav-offcanvas.open {
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .offcanvas-overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1999;
+    transition: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .offcanvas-overlay.on {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* About me page styling  ===================================================== */
+  
+  .about-me-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+    padding-top: 84px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .about-me-p {
+    font-size: 1.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: black;
+    width: 55%;
+    height: 80%;
+    text-align: center;
+  }
+  
+  .connect-icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: 30px;
+  }
+  
+  .connect-icons a i {
+    color: black;
+    font-size: 4.3rem;
+  }
+  
+  #myPhoto {
+    width: 30%;
+  }
+  
+  /* Icon styling ===================================================== */
+  
+  div.icon {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+  
+  div.icon a i {
+    color: lightgrey;
+    font-size: 2.75rem;
+  }
+  
+  i:hover {
+    transition: 0.3s ease;
+    transform: scale(1.222);
+  }
+  
+  /* Projects area styling ===================================================== */
+  
+  .projects-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .project-card-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: center;
+  }
+  
+  .project-card{
+    width: 22rem;
+    height: 28rem;
+  }
+  
+  .card-text{
+    font-size: 1rem;
+  }
+  
+  .project-card-description{
+    font-size: 1.5rem;
+  }
+  
+  #project-header{
+    padding-top: 50px;
+  }
+  
+  /* Resume area styling ===================================================== */
+  
+  .resume-wrapper {
+    height: 100vh;
+    display: flex;
+    padding-top: 84px;
+    flex-direction: column;
+  }
+  
+  #resumePDF {
+    align-self: center;
+  }
+  
+  /* Connect area styling ===================================================== */
+  
+  .connect-wrapper {
+    height: 100vh;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 3%;
+    flex-direction: column;
+  }
+  
+  .connect-form {
+    align-self: center;
+    width: 50%;
+    height: 90%;
+  }
+  
+  #text {
+    height: 30vh;
+  }
+  
+  label {
+    font-size: 2rem;
+  }
+  
+  .btn {
+    font-size: 1.25rem;
+  }
+  
+  #submitBtn {
+    margin-bottom: 50px;
+  }
+  
+  /* HR styling */
+  hr.styled {
+    margin-top: 100px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.75),
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  footer{
+    background-color: black;
+    height: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  
+  
+  @media only screen and (max-width: 1055px){
+  
+    .hamburger {
+      font-size: 1.2rem;
+    }
+  
+    #header-link{
+      font-size: 2.5rem;
+    }
+  
+    .about-me-wrapper{
+      height: 100%;
+    }
+  
+    #myPhoto{
+      margin-top: 30px;
+    }
+  
+    .projects-wrapper{
+      height: 100%;
+    }
+  
+    .project-card-wrapper{
+      flex-direction: column;
+      flex-flow: wrap;
+    }
+  
+    .project-card{
+      margin-top: 20px;
+    }
+  }
+  

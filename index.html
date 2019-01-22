@@ -22,16 +22,173 @@
         crossorigin="anonymous">
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <title>Tyler's Portfolio</title>
-    
+
 </head>
 <body>
-    
+    <!-- Hamburger to pop open side nav -->
+    <div class="nav nav-flex">
+        <a id="offCanvas" class="hamburger">
+            <i class="fas fa-bars"></i>
+        </a>
+        <a id="header-link" href="#">Tyler Bumguardner</a>
+    </div>
+
+    <!-- Side nav structure -->
+    <div class="nav-offcanvas">
+
+        <!-- Button to close side nav -->
+        <button type="button" class="close" id="offCanvasClose" aria-label="Close">
+            <i class="fas fa-times"></i>
+        </button>
+
+        <!-- Side nav scrolling menu -->
+        <div class="nav-offcanvas-menu">
+            <ul>
+                <li>
+                    <a class="link-item" id="about-me-link" href="#">about me</a>
+                </li>
+                <li>
+                    <a class="link-item" id="project-link" href="#">projects</a>
+                </li>
+                <li>
+                    <a class="link-item" id="resume-link" href="#">resume</a>
+                </li>
+                <li>
+                    <a class="link-item" id="connect-link" href="#">connect</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Side nav bottom icons -->
+        <div class="icon">
+            <a target="_blank" href="https://www.linkedin.com/in/tyler-bumguardner-b0328883/">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a target="_blank" href="https://github.com/StickOnTattoos">
+                <i class="fab fa-github-square"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Right side page overlay -->
+    <div class="offcanvas-overlay"></div>
+
+
+    <!-- About me content -->
+    <div class="about-me-wrapper">
+        <div class="about-me-p">
+            <p>Hi! My name is Tyler Bumguardner and I am a graduate of The University of Arizona Full Stack Web Development
+                Coding
+                Bootcamp.
+            </p>
+            <p>
+                Languages and technologies that I have worked with include: HTML5/CSS3, JavaScript, jQuery,
+                Node.js, React.js, Angular.js, Express, Passport.js, Bootstrap, MySQL, MongoDB, Firebase, Heroku, and Git.
+            </p>
+            <p>
+                I am currently looking for full time developer positions! Please feel free to contact me with
+                any of the information below.
+            </p>
+            <div class="connect-icons">
+                <a target="_blank" href="https://www.linkedin.com/in/tyler-bumguardner-b0328883/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a target="_blank" href="https://github.com/StickOnTattoos">
+                    <i class="fab fa-github-square"></i>
+                </a>
+            </div>
+        </div>
+
+        <img id="myPhoto" src="./assets//images/374.jpg" alt="Tyler Bumguardner Photo">
+    </div>
+
+    <hr class="styled">
+
+    <!-- Project content  -->
+    <div class="projects-wrapper">
+        <h1 class="section-header" id="project-header">Projects</h1>
+
+        <div class="project-card-wrapper">
+            <div class="card project-card">
+                <img class="card-img-top" src="./assets/images/bookspic.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Google Bookshelf</h5>
+                    <p class="card-text">Search and save books to the database using Google Books Api.
+                        walkthroughs. <br> Built using React.js</p>
+                    <a href="https://github.com/StickOnTattoos/google-books-react" class="btn btn-dark btn-sm">GitHub
+                        Repo</a>
+                    <a href="https://arcane-fjord-37932.herokuapp.com/" class="btn btn-dark btn-sm">Live Site</a>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <img class="card-img-top" src="./assets/images/clickgame.png" alt="Firebase Train Schedule App Screenshot">
+                <div class="card-body">
+                    <h5 class="card-title">Clicky Game App</h5>
+                    <p class="card-text">Memory based game application that was built using the Create React App</p>
+                        <a href="https://github.com/StickOnTattoos/clicky-game" class="btn btn-dark btn-sm">GitHub
+                            Repo</a>
+                    <a href="https://secret-mountain-40958.herokuapp.com/" class="btn btn-dark btn-sm">Live Site</a>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <img class="card-img-top" src="./assets/images/mainto.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Vehicle Maintenance Organizer</h5>
+                    <p class="card-text">MERN Stack Web Application <br>(Work in Progress)</p><br>
+                    <a href="https://github.com/StickOnTattoos/project-3-coo" class="btn btn-dark btn-sm">GitHub Repo</a>
+                    <a href="https://limitless-ocean-11574.herokuapp.com/" class="btn btn-dark btn-sm">Live Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="styled">
+
+    <!-- Resume content  -->
+    <div class="resume-wrapper">
+        <h1 class="section-header">Resume</h1>
+
+        <iframe id="resumePDF" src="./assets/pdf/resumePDF.pdf" width="50%" height="100%"></iframe>
+    </div>
+
+    <hr class="styled">
+
+    <!-- Connect with me content -->
+    <div class="connect-wrapper">
+        <h1 class="section-header">Connect With Me</h1>
+        <div class="connect-form">
+            <form action="https://formspree.io/tylerbumguardner@gmail.com" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" name="_replyto" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Email address">
+                </div>
+                <div class="form-group">
+                    <label for="text">Message</label>
+                    <textarea type="text" class="form-control" name="Message" id="text" placeholder="Enter your message here"></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+</body>
+
+<script src="./script.js"></script>
+
 </body>
 </html>
